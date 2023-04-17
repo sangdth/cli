@@ -1,0 +1,50 @@
+{
+  "parser": "@typescript-eslint/parser",
+  "extends": [
+    "airbnb-base",
+    "airbnb-typescript/base",
+    "plugin:import/recommended",
+    "plugin:import/typescript",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:prettier/recommended"
+  ],
+  "parserOptions": {
+    "project": "./tsconfig.json",
+    "tsconfigRootDir": "./",
+    "sourceType": "module"
+  },
+  "env": {
+    "node": true
+  },
+  "plugins": ["@typescript-eslint/eslint-plugin"],
+  "settings": {
+    "import/extensions": [".js", ".ts"],
+    "import/resolver": {
+      "typescript": true,
+      "node": {
+        "extensions": [".js", ".ts", ".yml", ".yaml", ".json"]
+      }
+    }
+  },
+  "rules": {
+    "no-console": ["warn", { "allow": ["info"] }],
+    "no-plusplus": "off",
+    "no-underscore-dangle": "off",
+    "import/no-unresolved": "off",
+    "import/no-extraneous-dependencies": "off",
+    "import/prefer-default-export": "off",
+    "@typescript-eslint/interface-name-prefix": "off",
+    "@typescript-eslint/explicit-function-return-type": "off",
+    "@typescript-eslint/explicit-module-boundary-types": "off",
+    "@typescript-eslint/no-explicit-any": "off",
+    "@typescript-eslint/camelcase": "off",
+    "@typescript-eslint/no-unused-vars": "warn",
+    "@typescript-eslint/indent": [
+      "error",
+      2,
+      {
+        "ignoredNodes": ["TSTypeParameterInstantiation"]
+      }
+    ]
+  }
+}

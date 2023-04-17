@@ -1,0 +1,59 @@
+{
+  "name": "your-project",
+  "version": "1.0.0",
+  "description": "The CLI starter",
+  "author": {
+    "name": "Sang Dang",
+    "email": "sang@dang.to"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sangdth/cli.git"
+  },
+  "main": "dist/index.js",
+  "files": [
+    "dist/**"
+  ],
+  "bin": {
+    "your-project": "dist/index.js"
+  },
+  "scripts": {
+    "build": "rimraf dist && ncc build src/index.ts -o dist",
+    "dev": "nodemon --watch src --ext ts --exec \"npm run build\"",
+    "lint": "eslint ./src --ext .ts",
+    "typecheck": "tsc --noEmit"
+  },
+  "preferGlobal": true,
+  "publishConfig": {
+    "access": "public"
+  },
+  "dependencies": {
+    "chalk": "5.2.0",
+    "find-up": "6.3.0",
+    "js-yaml": "4.1.0",
+    "ora": "6.3.0",
+    "yargs": "17.7.1"
+  },
+  "devDependencies": {
+    "@changesets/changelog-github": "0.4.8",
+    "@changesets/cli": "2.26.1",
+    "@types/js-yaml": "4.0.5",
+    "@types/node": "18.15.11",
+    "@types/yargs": "17.0.24",
+    "@typescript-eslint/eslint-plugin": "5.58.0",
+    "@typescript-eslint/parser": "5.58.0",
+    "@vercel/ncc": "0.36.1",
+    "eslint": "8.38.0",
+    "eslint-config-airbnb-base": "15.0.0",
+    "eslint-config-airbnb-typescript": "17.0.0",
+    "eslint-config-prettier": "8.8.0",
+    "eslint-import-resolver-typescript": "3.5.5",
+    "eslint-plugin-import": "2.27.5",
+    "eslint-plugin-prettier": "4.2.1",
+    "nodemon": "2.0.22",
+    "prettier": "2.8.7",
+    "rimraf": "5.0.0",
+    "typescript": "5.0.4"
+  }
+}
