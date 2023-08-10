@@ -32,7 +32,7 @@
     "chalk": "5.2.0",
     "find-up": "6.3.0",
     "js-yaml": "4.1.0",
-    "ora": "6.3.0",
+    "ora": "6.3.1",
     "yargs": "17.7.1"
   },
   "devDependencies": {
